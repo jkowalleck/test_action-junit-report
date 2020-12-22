@@ -1,0 +1,5 @@
+<testsuite tests="1">
+    <testcase classname="B" name="FailingTest">
+        <failure type="B-Failed"> B::FailingTest </failure>
+    </testcase>
+</testsuite>

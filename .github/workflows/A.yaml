@@ -1,0 +1,17 @@
+
+name: Test A
+on: ['push']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # ... some steps that generate the `tests.xml`
+
+      - uses: mikepenz/action-junit-report@v1.1.1
+        # see https://github.com/mikepenz/action-junit-report
+        with:
+          check_name: test results A
+          report_paths: A/reports/tests.xml
+          github_token: ${{ secrets.GITHUB_TOKEN }}
